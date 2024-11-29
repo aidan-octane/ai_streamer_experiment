@@ -1,0 +1,60 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tachophobicai</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- <div class="container mt-4"> -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" id="command_container">
+                <h4 class="title">ADMIN PANEL</h4>
+                <div id="command_content"></div>
+
+                <!-- Text Input and Submit Button -->
+                <form id="inputForm">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="textInput" placeholder="Type something...">
+                    </div>
+                    <button type="submit" class="btn btn-secondary" name="action" value="monologue">Monologue</button>
+                    <button type="submit" class="btn btn-secondary" name="action" value="admin_command">Admin Command</button>
+                    <button type="submit" class="btn btn-secondary" name="action" value="chat_response">Chat Response</button>
+                </form>
+            </div>
+            <div class="col-md-6" id="message_container">
+                <h4 class="title">ARTIFICIAL CHAT RESPONSES</h4>
+                <div id="message_content"></div>
+                <div id="input_section">
+                    <!-- Two small input boxes laid out horizontally -->
+                    <input type="text" id="gen_rate_input" class="small-input" placeholder="2 Messages / Gen">
+                    <button type="button" class="btn btn-primary" id="gen_rate_button">Submit</button>
+
+                    <input type="text" id="blocklist_input" class="small-input" placeholder="Blocklist">
+                    <button type="button" class="btn btn-primary" id="blocklist_button">Submit</button>
+
+                    <input type="text" id="char_threshold_input" class="small-input" placeholder="Char Threshold">
+                    <button type="button" class="btn btn-primary" id="char_threshold_button">Submit</button>
+
+                    <button type="button" class="btn btn-secondary" id="cache_button">Clear Message Queue</button>
+                </div>
+                <div id="label_section">
+                    <label for="gen_rate_input" class="small-label" id="one"># msgs<br>per generation</label>
+                    <label for="blocklist_input" class="small-label" id="two">add twitch username<br>to do-not-generate list</label>
+                    <label for="char_threshold_input" class="small-label" id="three">min message<br>length threshold</label>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+
+</body>
+</html>

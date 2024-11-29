@@ -1,0 +1,119 @@
+/* static/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px; /* Limits the container width */
+    margin: 0 auto; /* Centers the container on the page */
+    padding: 10px;
+    box-sizing: border-box;
+    gap: 20px; /* Adds spacing between the divs */
+
+}
+
+#command_container, #message_container {
+    flex: 1; /* Makes each div take equal width */
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    height: 825px; /* Fixed height for both divs */
+    width: 1500px;
+    overflow-y: auto; /* Scroll when content exceeds div height */
+    box-sizing: border-box;
+}
+
+#command_container {
+    background-color: #f8f9fa;
+}
+
+#message_container {
+    background-color: #e9ecef;
+    float: right;
+    width: 50%; /* Assuming the width of the container is set like this */
+    margin-bottom: 20px; /* Adding space below the container */
+}
+
+
+#message_content {
+    width: 100%;
+    height: 600px; /* Fixed height */
+    border: 1px solid #ccc;
+    overflow-y: auto; /* Allows scrolling */
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.5;
+}
+#command_content {
+    width: 100%;
+    height: 600px; /* Fixed height */
+    border: 1px solid #ccc;
+    overflow-y: auto; /* Allows scrolling */
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+#message_content p {
+    margin: 5px 0; /* Space between messages */
+}
+
+.title {
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+#input_section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    clear: both; /* Ensures it moves below the floated message_container */
+    margin-top: 20px;
+    margin-left: 0;
+}
+
+.small-input {
+    width: 100px;
+    margin-right: 5px;
+    margin-left: 5px
+}
+
+#inputLabel {
+    margin-right: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+#cache_button {
+    margin-left: 10px
+}
+
+
+.small-label {
+    text-align: center;
+    font-weight: bold; /* Make the text bold */
+    font-size: 12px; /* Adjust font size as needed */
+    margin-top: -30px; /* Add space above the label */
+    margin-left: 5px; /* Align the label with the input box */
+    color: #333; /* Adjust color if necessary */
+}
+
+#one {
+    padding-left: 35px
+}
+
+#two {
+    padding-left: 80px
+}
+
+#three {
+    padding-left:65px
+}
